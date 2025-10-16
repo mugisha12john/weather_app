@@ -1,0 +1,12 @@
+{
+  "name": "weather-app-main",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/style.css -o ./src/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.14",
+    "@tailwindcss/cli": "^4.1.14"
+  }
+}

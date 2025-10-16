@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Weather app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="bg-[#02012b]">
+    <main class="m-8">
+      <div class="flex justify-between">
+        <img src="./assets/images/logo.svg" alt="" />
+        <div class="flex justify-center bg-[#25253F] p-2 gap-2 rounded-xl">
+          <img src="./assets/images/icon-units.svg" class="w-5" alt="" />
+          <select class="text-white" name="" id="">
+            <option value="metric" class="text-black">Celsius (°C)</option>
+            <option value="imperial" class="text-black">Fahrenheit (°F)</option>
+          </select>
+        </div>
+      </div>
+
+      <h1 class="text-center mt-10 font-medium text-white text-2xl">
+        How's the sky looking today?
+      </h1>
+
+      <section class="flex justify-center gap-4">
+        <div
+          class="flex justify-start bg-[#25253f] p-2 gap-2 w-96 rounded-xl mt-10"
+        >
+          <img src="./assets/images/icon-search.svg" alt="" />
+          <input
+            class="text-white w-1/2"
+            type="text"
+            placeholder="Search for a place ...."
+          />
+        </div>
+        <button
+          class="w-20 h-10 mt-10 bg-blue-500 p-2 rounded-xl text-white font-medium text-sm"
+        >
+          search
+        </button>
+      </section>
+
+      <!-- main two cards -->
+      <section class="flex">
+        <div class="h-48 w-2/3 rounded-xl mx-auto mt-10">
+          <img
+            src="/assets/images/bg-today-large.svg"
+            class="h-56 w-2/3"
+            alt=""
+          />
+        </div>
+        <div class="h-48 w-96 rounded-xl mx-auto mt-10"></div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
