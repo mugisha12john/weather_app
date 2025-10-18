@@ -63,11 +63,11 @@
     </main>
 
     <!-- all main hero section  -->
-    <main class="m-8">
+    <main class="m-8 flex w-[1300px] gap-4 justify-between">
       <!-- main two cards -->
-      <section class="">
+      <section class="flex flex-col">
         <div
-          class="rounded-xl mx-auto bg-[url('/assets/images/bg-today-small.svg')] lg:bg-[url('/assets/images/bg-today-large.svg')] lg:w-2/4 mt-10"
+          class="rounded-xl mx-auto bg-[url('/assets/images/bg-today-small.svg')] lg:bg-[url('/assets/images/bg-today-large.svg')] lg:w-[800px] mt-10"
         >
           <div class="p-2">
             <h2 class="mt-4 text-white text-3xl font-bold text-center">
@@ -88,29 +88,33 @@
         </div>
 
         <!-- // weather details -->
-        <div class="grid grid-cols-2 gap-4">
-          <div class="bg-[#25253f] w-40 rounded-2xl text-white">
-            <h1 class="text-2xl font-light p-4">Feels Like</h1>
-            <h2 class="text-4xl font-bold p-4">65°</h2>
+        <div class="grid grid-cols-2 lg:mt-4 lg:grid-cols-4 gap-4">
+          <div class="bg-[#25253f] w-40 lg:w-32 rounded-xl text-white">
+            <h1 class="text-2xl lg:text-lg font-light p-4 lg:p-2">
+              Feels Like
+            </h1>
+            <h2 class="text-4xl lg:text-xl font-bold p-4 lg:p-2">65°</h2>
           </div>
 
-          <div class="bg-[#25253f] w-40 rounded-2xl text-white">
-            <h1 class="text-2xl font-light p-4">Humidity</h1>
-            <h2 class="text-4xl font-bold p-4">46%</h2>
+          <div class="bg-[#25253f] w-40 lg:w-32 rounded-xl text-white">
+            <h1 class="text-2xl lg:text-lg font-light p-4 lg:p-2">Humidity</h1>
+            <h2 class="text-4xl lg:text-xl font-bold p-4 lg:p-2">46%</h2>
           </div>
-          <div class="bg-[#25253f] w-40 rounded-2xl text-white">
-            <h1 class="text-2xl font-light p-4">Wind</h1>
-            <h2 class="text-4xl font-bold p-4">9 mph</h2>
+          <div class="bg-[#25253f] w-40 lg:w-32 rounded-xl text-white">
+            <h1 class="text-2xl lg:text-lg font-light p-4 lg:p-2">Wind</h1>
+            <h2 class="text-4xl lg:text-xl font-bold p-4 lg:p-2">9 mph</h2>
           </div>
-          <div class="bg-[#25253f] w-40 rounded-2xl text-white">
-            <h1 class="text-2xl font-light p-4">Precipitation</h1>
-            <h2 class="text-4xl font-bold p-4">0 in</h2>
+          <div class="bg-[#25253f] w-40 lg:w-32 rounded-xl text-white">
+            <h1 class="text-2xl lg:text-lg font-light p-4 lg:p-2">
+              Precipitation
+            </h1>
+            <h2 class="text-4xl lg:text-xl font-bold p-4 lg:p-2">0 in</h2>
           </div>
         </div>
         <!-- Daily forecast -->
         <div class="mt-10">
           <h1 class="text-white text-2xl font-medium">Dail Forecast</h1>
-          <section class="mt-5 grid grid-cols-3 gap-4">
+          <section class="mt-5 grid grid-cols-3 lg:grid-cols-7 lg:gap-2 gap-4">
             <div class="bg-[#25253f] w-24 rounded-2xl text-white">
               <h1 class="font-semibold p-2 text-center text-lg">Tue</h1>
               <img src="./assets/images/icon-sunny.webp" alt="sunny icon" />
@@ -154,50 +158,49 @@
             </div>
           </section>
         </div>
-
-        <!-- Hourly forecast -->
-        <section class="bg-[#25253f] rounded-xl">
-          <div class="flex justify-between p-4 mt-10 items-center">
-            <h1 class="text-white rounded-2xl font-medium">Hourly Forecast</h1>
-            <div
-              class="bg-[#36365f] w-24 font-semibold rounded-xl p-2 text-white"
-            >
-              Tuesdays
-            </div>
+      </section>
+      <!-- Hourly forecast -->
+      <section class="bg-[#25253f] rounded-xl">
+        <div class="flex justify-between p-4 mt-10 items-center">
+          <h1 class="text-white rounded-2xl font-medium">Hourly Forecast</h1>
+          <div
+            class="bg-[#36365f] w-24 font-semibold rounded-xl p-2 text-white"
+          >
+            Tuesdays
           </div>
-          <!-- hourly forecast details card -->
-          <main class="p-4 grid grid-cols-1 gap-2">
-            <div
-              class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
-            >
-              <div class="flex justify-center items-center">
-                <img src="/assets/images/icon-rain.webp" class="w-12" />
-                <h3 class="text-white text-xl">3 PM</h3>
-              </div>
-              <h1 class="text-white text-lg">20</h1>
+        </div>
+        <!-- hourly forecast details card -->
+        <main class="p-4 grid grid-cols-1 gap-2">
+          <div
+            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+          >
+            <div class="flex justify-center items-center">
+              <img src="/assets/images/icon-rain.webp" class="w-12" />
+              <h3 class="text-white text-xl">3 PM</h3>
             </div>
-            <!-- 2 -->
-            <div
-              class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
-            >
-              <div class="flex justify-center items-center">
-                <img src="/assets/images/icon-fog.webp" class="w-12" />
-                <h3 class="text-white text-xl">3 PM</h3>
-              </div>
-              <h1 class="text-white text-lg">20</h1>
+            <h1 class="text-white text-lg">20</h1>
+          </div>
+          <!-- 2 -->
+          <div
+            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+          >
+            <div class="flex justify-center items-center">
+              <img src="/assets/images/icon-fog.webp" class="w-12" />
+              <h3 class="text-white text-xl">3 PM</h3>
             </div>
-            <!-- 3 -->
-            <div
-              class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
-            >
-              <div class="flex justify-center items-center">
-                <img src="/assets/images/icon-sunny.webp" class="w-12" />
-                <h3 class="text-white text-xl">3 PM</h3>
-              </div>
-              <h1 class="text-white text-lg">20</h1>
+            <h1 class="text-white text-lg">20</h1>
+          </div>
+          <!-- 3 -->
+          <div
+            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+          >
+            <div class="flex justify-center items-center">
+              <img src="/assets/images/icon-sunny.webp" class="w-12" />
+              <h3 class="text-white text-xl">3 PM</h3>
             </div>
-          </main>
-        </section>
+            <h1 class="text-white text-lg">20</h1>
+          </div>
+        </main>
       </section>
     </main>
     <div class="attribution">
