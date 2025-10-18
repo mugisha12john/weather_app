@@ -21,7 +21,7 @@
         text-align: center;
       }
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: hsl(231, 28%, 91%);
       }
     </style>
   </head>
@@ -60,11 +60,14 @@
           search
         </button>
       </section>
+    </main>
 
+    <!-- all main hero section  -->
+    <main class="m-8">
       <!-- main two cards -->
       <section class="">
         <div
-          class="rounded-xl mx-auto bg-[url('/assets/images/bg-today-small.svg')] mt-10"
+          class="rounded-xl mx-auto bg-[url('/assets/images/bg-today-small.svg')] lg:bg-[url('/assets/images/bg-today-large.svg')] lg:w-2/4 mt-10"
         >
           <div class="p-2">
             <h2 class="mt-4 text-white text-3xl font-bold text-center">
@@ -151,53 +154,52 @@
             </div>
           </section>
         </div>
-      </section>
 
-      <!-- Hourly forecast -->
-      <section class="bg-[#25253f] rounded-xl">
-        <div class="flex justify-between p-4 mt-10 items-center">
-          <h1 class="text-white rounded-2xl font-medium">Hourly Forecast</h1>
-          <div
-            class="bg-[#36365f] w-24 font-semibold rounded-xl p-2 text-white"
-          >
-            Tuesdays
-          </div>
-        </div>
-        <!-- hourly forecast details card -->
-        <main class="p-4 grid grid-cols-1 gap-2">
-          <div
-            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
-          >
-            <div class="flex justify-center items-center">
-              <img src="/assets/images/icon-rain.webp" class="w-12" />
-              <h3 class="text-white text-xl">3 PM</h3>
+        <!-- Hourly forecast -->
+        <section class="bg-[#25253f] rounded-xl">
+          <div class="flex justify-between p-4 mt-10 items-center">
+            <h1 class="text-white rounded-2xl font-medium">Hourly Forecast</h1>
+            <div
+              class="bg-[#36365f] w-24 font-semibold rounded-xl p-2 text-white"
+            >
+              Tuesdays
             </div>
-            <h1 class="text-white text-lg">20</h1>
           </div>
-          <!-- 2 -->
-          <div
-            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
-          >
-            <div class="flex justify-center items-center">
-              <img src="/assets/images/icon-fog.webp" class="w-12" />
-              <h3 class="text-white text-xl">3 PM</h3>
+          <!-- hourly forecast details card -->
+          <main class="p-4 grid grid-cols-1 gap-2">
+            <div
+              class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+            >
+              <div class="flex justify-center items-center">
+                <img src="/assets/images/icon-rain.webp" class="w-12" />
+                <h3 class="text-white text-xl">3 PM</h3>
+              </div>
+              <h1 class="text-white text-lg">20</h1>
             </div>
-            <h1 class="text-white text-lg">20</h1>
-          </div>
-          <!-- 3 -->
-          <div
-            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
-          >
-            <div class="flex justify-center items-center">
-              <img src="/assets/images/icon-sunny.webp" class="w-12" />
-              <h3 class="text-white text-xl">3 PM</h3>
+            <!-- 2 -->
+            <div
+              class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+            >
+              <div class="flex justify-center items-center">
+                <img src="/assets/images/icon-fog.webp" class="w-12" />
+                <h3 class="text-white text-xl">3 PM</h3>
+              </div>
+              <h1 class="text-white text-lg">20</h1>
             </div>
-            <h1 class="text-white text-lg">20</h1>
-          </div>
-        </main>
+            <!-- 3 -->
+            <div
+              class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+            >
+              <div class="flex justify-center items-center">
+                <img src="/assets/images/icon-sunny.webp" class="w-12" />
+                <h3 class="text-white text-xl">3 PM</h3>
+              </div>
+              <h1 class="text-white text-lg">20</h1>
+            </div>
+          </main>
+        </section>
       </section>
     </main>
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.

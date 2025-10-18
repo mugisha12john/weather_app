@@ -206,6 +206,9 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -464,6 +467,26 @@
       margin-top: calc(var(--spacing) * 8);
     }
   }
+  .lg\:w-1\/2 {
+    @media (width >= 64rem) {
+      width: calc(1/2 * 100%);
+    }
+  }
+  .lg\:w-2 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 2);
+    }
+  }
+  .lg\:w-2\/3 {
+    @media (width >= 64rem) {
+      width: calc(2/3 * 100%);
+    }
+  }
+  .lg\:w-2\/4 {
+    @media (width >= 64rem) {
+      width: calc(2/4 * 100%);
+    }
+  }
   .lg\:w-4 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 4);
@@ -489,6 +512,11 @@
       width: calc(var(--spacing) * 80);
     }
   }
+  .lg\:w-96 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 96);
+    }
+  }
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
@@ -502,6 +530,21 @@
   .lg\:gap-4 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 4);
+    }
+  }
+  .lg\:bg-\[url\(\'\/assets\/images\/bg-today-des\.svg\'\)\] {
+    @media (width >= 64rem) {
+      background-image: url('/assets/images/bg-today-des.svg');
+    }
+  }
+  .lg\:bg-\[url\(\'\/assets\/images\/bg-today-large\.svg\'\)\] {
+    @media (width >= 64rem) {
+      background-image: url('/assets/images/bg-today-large.svg');
+    }
+  }
+  .lg\:bg-\[url\(\'\/assets\/images\/bg-today-small\.svg\'\)\] {
+    @media (width >= 64rem) {
+      background-image: url('/assets/images/bg-today-small.svg');
     }
   }
   .lg\:text-4xl {
