@@ -7,17 +7,14 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-700: oklch(55.5% 0.163 48.998);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-3xs: 16rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -28,10 +25,7 @@
     --text-6xl--line-height: 1;
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
-    --text-9xl: 8rem;
-    --text-9xl--line-height: 1;
     --font-weight-light: 300;
-    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -193,9 +187,6 @@
   .static {
     position: static;
   }
-  .m-4 {
-    margin: calc(var(--spacing) * 4);
-  }
   .m-8 {
     margin: calc(var(--spacing) * 8);
   }
@@ -208,11 +199,8 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
-  }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
   }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
@@ -244,15 +232,6 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
-  }
-  .h-45 {
-    height: calc(var(--spacing) * 45);
-  }
-  .w-3xs {
-    width: var(--container-3xs);
-  }
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
@@ -265,9 +244,6 @@
   .w-40 {
     width: calc(var(--spacing) * 40);
   }
-  .w-48 {
-    width: calc(var(--spacing) * 48);
-  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -276,6 +252,9 @@
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -308,14 +287,35 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-\[\#0000d5\] {
+    background-color: #0000d5;
+  }
   .bg-\[\#02012b\] {
     background-color: #02012b;
+  }
+  .bg-\[\#2525\] {
+    background-color: #2525;
   }
   .bg-\[\#25253F\] {
     background-color: #25253F;
   }
   .bg-\[\#25253f\] {
     background-color: #25253f;
+  }
+  .bg-\[\#25254f\] {
+    background-color: #25254f;
+  }
+  .bg-\[\#25254g\] {
+    background-color: #25254g;
+  }
+  .bg-\[\#36365f\] {
+    background-color: #36365f;
+  }
+  .bg-\[\#\] {
+    background-color: #;
+  }
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
   }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
@@ -371,10 +371,6 @@
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
-  }
-  .font-normal {
-    --tw-font-weight: var(--font-weight-normal);
-    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
