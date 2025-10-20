@@ -192,8 +192,23 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .static {
     position: static;
+  }
+  .left-3 {
+    left: calc(var(--spacing) * 3);
+  }
+  .left-20 {
+    left: calc(var(--spacing) * 20);
+  }
+  .left-36 {
+    left: calc(var(--spacing) * 36);
+  }
+  .left-40 {
+    left: calc(var(--spacing) * 40);
   }
   .col-span-2 {
     grid-column: span 2 / span 2;
@@ -231,6 +246,9 @@
   .mt-14 {
     margin-top: calc(var(--spacing) * 14);
   }
+  .mr-0 {
+    margin-right: calc(var(--spacing) * 0);
+  }
   .mr-10 {
     margin-right: calc(var(--spacing) * 10);
   }
@@ -254,6 +272,9 @@
   }
   .grid {
     display: grid;
+  }
+  .hidden {
+    display: none;
   }
   .table {
     display: table;
@@ -305,6 +326,9 @@
   }
   .w-44 {
     width: calc(var(--spacing) * 44);
+  }
+  .w-52 {
+    width: calc(var(--spacing) * 52);
   }
   .w-72 {
     width: calc(var(--spacing) * 72);
@@ -384,6 +408,15 @@
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
+  .rounded-\[5px\] {
+    border-radius: 5px;
+  }
+  .rounded-\[8px\] {
+    border-radius: 8px;
+  }
+  .rounded-\[10px\] {
+    border-radius: 10px;
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -394,6 +427,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-\[\#6f6f9a\] {
+    border-color: #6f6f9a;
+  }
   .bg-\[\#0000d5\] {
     background-color: #0000d5;
   }
@@ -403,11 +439,17 @@
   .bg-\[\#2c2c3e\] {
     background-color: #2c2c3e;
   }
+  .bg-\[\#2e2e51\] {
+    background-color: #2e2e51;
+  }
   .bg-\[\#3b3b61\] {
     background-color: #3b3b61;
   }
   .bg-\[\#3c3c57\] {
     background-color: #3c3c57;
+  }
+  .bg-\[\#6f6f9a\] {
+    background-color: #6f6f9a;
   }
   .bg-\[\#02012b\] {
     background-color: #02012b;
@@ -427,11 +469,23 @@
   .bg-\[\#25254g\] {
     background-color: #25254g;
   }
+  .bg-\[\#26264a\] {
+    background-color: #26264a;
+  }
+  .bg-\[\#34345c\] {
+    background-color: #34345c;
+  }
   .bg-\[\#36365f\] {
     background-color: #36365f;
   }
   .bg-\[\#41416b\] {
     background-color: #41416b;
+  }
+  .bg-\[\#272742\] {
+    background-color: #272742;
+  }
+  .bg-\[\#303056\] {
+    background-color: #303056;
   }
   .bg-\[\#\] {
     background-color: #;
@@ -511,6 +565,21 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-\[\#3c3c57\] {
+    color: #3c3c57;
+  }
+  .text-\[\#4b4b6d\] {
+    color: #4b4b6d;
+  }
+  .text-\[\#6f6f9a\] {
+    color: #6f6f9a;
+  }
+  .text-\[\#32324c\] {
+    color: #32324c;
+  }
+  .text-\[\#636383\] {
+    color: #636383;
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -554,6 +623,96 @@
       }
     }
   }
+  .lg\:right-1 {
+    @media (width >= 64rem) {
+      right: calc(var(--spacing) * 1);
+    }
+  }
+  .lg\:right-1\/3 {
+    @media (width >= 64rem) {
+      right: calc(1/3 * 100%);
+    }
+  }
+  .lg\:right-20 {
+    @media (width >= 64rem) {
+      right: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:right-200 {
+    @media (width >= 64rem) {
+      right: calc(var(--spacing) * 200);
+    }
+  }
+  .lg\:right-auto {
+    @media (width >= 64rem) {
+      right: auto;
+    }
+  }
+  .lg\:left-1\/2 {
+    @media (width >= 64rem) {
+      left: calc(1/2 * 100%);
+    }
+  }
+  .lg\:left-1\/3 {
+    @media (width >= 64rem) {
+      left: calc(1/3 * 100%);
+    }
+  }
+  .lg\:left-1\/4 {
+    @media (width >= 64rem) {
+      left: calc(1/4 * 100%);
+    }
+  }
+  .lg\:left-2 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 2);
+    }
+  }
+  .lg\:left-2\/2 {
+    @media (width >= 64rem) {
+      left: calc(2/2 * 100%);
+    }
+  }
+  .lg\:left-2\/3 {
+    @media (width >= 64rem) {
+      left: calc(2/3 * 100%);
+    }
+  }
+  .lg\:left-\[0\%\] {
+    @media (width >= 64rem) {
+      left: 0%;
+    }
+  }
+  .lg\:left-\[70\%\] {
+    @media (width >= 64rem) {
+      left: 70%;
+    }
+  }
+  .lg\:left-\[70\] {
+    @media (width >= 64rem) {
+      left: 70;
+    }
+  }
+  .lg\:left-\[80\%\] {
+    @media (width >= 64rem) {
+      left: 80%;
+    }
+  }
+  .lg\:left-\[83\%\] {
+    @media (width >= 64rem) {
+      left: 83%;
+    }
+  }
+  .lg\:left-\[85\%\] {
+    @media (width >= 64rem) {
+      left: 85%;
+    }
+  }
+  .lg\:left-auto {
+    @media (width >= 64rem) {
+      left: auto;
+    }
+  }
   .lg\:mx-auto {
     @media (width >= 64rem) {
       margin-inline: auto;
@@ -587,6 +746,11 @@
   .lg\:mt-14 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 14);
+    }
+  }
+  .lg\:mr-8 {
+    @media (width >= 64rem) {
+      margin-right: calc(var(--spacing) * 8);
     }
   }
   .lg\:mb-0 {
