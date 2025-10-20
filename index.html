@@ -31,17 +31,20 @@
         <img src="./assets/images/logo.svg" class="w-24" alt="" />
         <div class="flex justify-center bg-[#25253F] p-2 gap-2 rounded-xl">
           <img src="./assets/images/icon-units.svg" class="w-5" alt="" />
-          <button id="units" class="text-white font-medium hover:cursor-pointer">
+          <button
+            id="units"
+            class="text-white font-medium hover:cursor-pointer"
+          >
             Units v
           </button>
         </div>
       </div>
       <!-- Unit dropdown boxes -->
       <div
-        class="bg-[#26264a] rounded-xl w-52 mt-4 lg:mr-8 absolute left-40 lg:left-[83%]"
+        id="dropdown-unit"
+        class="bg-[#26264a] hidden rounded-xl w-52 mt-4 lg:mr-8 absolute left-40 lg:left-[83%]"
       >
         <div
-          id="dropdown-unit"
           class="flex flex-col justify-center p-4 gap-4 text-white font-medium text-sm cursor-pointer"
         >
           <span class="bg-[#3c3c57] p-1 rounded-[8px]">Switch to imperial</span>
@@ -191,11 +194,31 @@
       <section class="bg-[#25253f] mt-5 rounded-xl">
         <div class="flex justify-between p-4 mt-10 items-center">
           <h1 class="text-white rounded-2xl font-medium">Hourly Forecast</h1>
-          <div
-            class="bg-[#36365f] w-24 font-semibold rounded-xl p-2 text-white"
+          <button
+            id="days-btn"
+            class="bg-[#36365f] w-24 font-semibold hover:cursor-pointer rounded-xl p-2 text-white"
           >
             Tuesdays
-          </div>
+          </button>
+        </div>
+
+        <!-- add to choose certain day  -->
+        <!-- Add to choose certain day -->
+        <div
+          id="days-model"
+          class="bg-[#26264a] rounded-xl w-44 border-[#6f6f9a] border-1 lg:mr-8 absolute left-40 lg:left-[80%]"
+        >
+          <ul
+            class="flex flex-col justify-center mt-2 p-4 gap-4 text-white font-medium text-sm"
+          >
+            <li class="cursor-pointer hover:text-[#a5a5ff]">Monday</li>
+            <li class="cursor-pointer hover:text-[#a5a5ff]">Tuesday</li>
+            <li class="cursor-pointer hover:text-[#a5a5ff]">Wednesday</li>
+            <li class="cursor-pointer hover:text-[#a5a5ff]">Thursday</li>
+            <li class="cursor-pointer hover:text-[#a5a5ff]">Friday</li>
+            <li class="cursor-pointer hover:text-[#a5a5ff]">Saturday</li>
+            <li class="cursor-pointer hover:text-[#a5a5ff]">Sunday</li>
+          </ul>
         </div>
         <!-- hourly forecast details card -->
         <main class="p-4 grid grid-cols-1 gap-2">
