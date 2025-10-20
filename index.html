@@ -12,7 +12,7 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Weather app</title>
+    <title>Weather app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -29,9 +29,30 @@
     <main class="m-8">
       <div class="flex justify-between">
         <img src="./assets/images/logo.svg" class="w-24" alt="" />
-        <div class="flex justify-center bg-[#25253F] p-2 gap-2 rounded-xl">
+        <div
+          class="flex justify-center bg-[#25253F] hover:cursor-pointer p-2 gap-2 rounded-xl"
+        >
           <img src="./assets/images/icon-units.svg" class="w-5" alt="" />
           <span class="text-white font-medium">Units v</span>
+        </div>
+      </div>
+      <!-- Unit dropdown boxes -->
+      <div class="bg-[#25253f] rounded-xl w-44">
+        <div
+          class="flex flex-col justify-center p-4 gap-4 text-white font-medium text-sm"
+        >
+          <span>Switch to imperial</span>
+          <span>Temperature</span>
+          <span class="bg-[#3c3c57]">Celsius °C</span>
+          <span>Fahrenheit °F</span>
+          <hr />
+          <h4>wind speed</h4>
+          <span>km/h</span>
+          <span>mph</span>
+          <hr />
+          <h4>Precipitation</h4>
+          <span>Millmeters (mm)</span>
+          <span>Inches (in)</span>
         </div>
       </div>
 
@@ -55,7 +76,7 @@
           />
         </div>
         <button
-          class="h-10 mt-2 bg-blue-500 p-2 rounded-xl text-white font-medium hover:cursor-pointer text-sm lg:mt-0 lg:w-24"
+          class="h-10 mt-2 bg-blue-500 hover:bg-blue-700 ease-in-out duration-400 p-2 rounded-xl text-white font-medium hover:cursor-pointer text-sm lg:mt-0 lg:w-24"
         >
           search
         </button>
