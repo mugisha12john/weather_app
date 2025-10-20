@@ -35,8 +35,9 @@
             id="units"
             class="text-white font-medium hover:cursor-pointer"
           >
-            Units v
+            Units
           </button>
+          <img src="/assets/images/icon-dropdown.svg" alt="" srcset="" />
         </div>
       </div>
       <!-- Unit dropdown boxes -->
@@ -75,13 +76,18 @@
           class="flex lg:w-80 justify-start bg-[#25253f] p-2 gap-2 rounded-xl mt-10 lg:mt-0"
         >
           <img src="./assets/images/icon-search.svg" alt="" />
-          <input id="search-input"
+          <input
+            id="search-input"
             class="text-white bg-[#25253f] outline-none w-72 p-1"
             type="text"
+            autocapitalize="on"
+            autocorrect="on"
+            autocomplete="off"
             placeholder="Search for a place ...."
           />
         </div>
-        <button id="search-btn"
+        <button
+          id="search-btn"
           class="h-10 mt-2 bg-blue-500 hover:bg-blue-700 ease-in-out duration-400 p-2 rounded-xl text-white font-medium hover:cursor-pointer text-sm lg:mt-0 lg:w-24"
         >
           search
@@ -94,7 +100,7 @@
       <!-- main two cards -->
       <section class="flex flex-col">
         <div
-          class="rounded-xl flex-1 mx-auto bg-[url('/assets/images/bg-today-small.svg')] lg:bg-[url('/assets/images/bg-today-large.svg')] lg:w-[800px] mt-10"
+          class="hero-section rounded-xl flex-1 mx-auto bg-[url('/assets/images/bg-today-small.svg')] lg:bg-[url('/assets/images/bg-today-large.svg')] lg:w-[800px] mt-10"
         >
           <div class="lg:flex lg:justify-around lg:items-center lg:mb-20">
             <div class="p-2 lg:mt-14">
@@ -196,9 +202,10 @@
           <h1 class="text-white rounded-2xl font-medium">Hourly Forecast</h1>
           <button
             id="days-btn"
-            class="bg-[#36365f] w-24 font-semibold hover:cursor-pointer rounded-xl p-2 text-white"
+            class="bg-[#36365f] flex gap-2 w-24 font-semibold hover:cursor-pointer rounded-[8px] p-2 text-white"
           >
-            Tuesdays
+            <p>Tuesdays</p>
+            <img src="/assets/images/icon-dropdown.svg" alt="" srcset="" />
           </button>
         </div>
 
@@ -206,7 +213,7 @@
         <!-- Add to choose certain day -->
         <div
           id="days-model"
-          class="bg-[#26264a] rounded-xl w-44 border-[#6f6f9a] border-1 lg:mr-8 absolute left-40 lg:left-[80%]"
+          class="bg-[#26264a] hidden rounded-xl w-44 border-[#6f6f9a] border-1 lg:mr-8 absolute left-40 lg:left-[80%]"
         >
           <ul
             class="flex flex-col justify-center mt-2 p-4 gap-4 text-white font-medium text-sm"
