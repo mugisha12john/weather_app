@@ -84,9 +84,13 @@ function loading() {
   days.innerHTML = "-";
 }
 searchButton.addEventListener("click", () => {
+  if (searchInput.value.trim() === "") {
+    alert("Please enter a location to search.");
+    searchInput.focus();
+    return;
+  }
   searchButton.innerText = "Loading...";
-  const query = searchInput.value;
-  console.log("Searching for:", query);
+
   loading();
   // Add your search functionality here
   const api = `https://geocoding-api.open-meteo.com/v1/search?name=${searchInput.value}&count=1&language=en&format=json`;
