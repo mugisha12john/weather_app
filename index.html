@@ -82,7 +82,7 @@
             type="text"
             autocapitalize="on"
             autocorrect="on"
-            autocomplete="off"
+            autocomplete="country"
             placeholder="Search for a place ...."
           />
         </div>
@@ -130,22 +130,42 @@
         <div class="grid grid-cols-2 mt-5 gap-2 lg:mt-4 lg:grid-cols-4">
           <div class="bg-[#25253f] w-40 lg:w-32 rounded-xl text-white">
             <h1 class="text-xl lg:text-lg font-light p-4 lg:p-2">Feels Like</h1>
-            <h2 class="text-2xl lg:text-xl font-bold p-4 lg:p-2">65°</h2>
+            <h2
+              id="weather-box-1"
+              class="text-2xl lg:text-xl font-bold p-4 lg:p-2"
+            >
+              65°
+            </h2>
           </div>
 
           <div class="bg-[#25253f] w-40 lg:w-32 rounded-xl text-white">
             <h1 class="text-xl lg:text-lg font-light p-4 lg:p-2">Humidity</h1>
-            <h2 class="text-2xl lg:text-xl font-bold p-4 lg:p-2">46%</h2>
+            <h2
+              id="weather-box-2"
+              class="text-2xl lg:text-xl font-bold p-4 lg:p-2"
+            >
+              46%
+            </h2>
           </div>
           <div class="bg-[#25253f] w-40 lg:w-32 rounded-xl text-white">
             <h1 class="text-xl lg:text-lg font-light p-4 lg:p-2">Wind</h1>
-            <h2 class="text-2xl lg:text-xl font-bold p-4 lg:p-2">9 mph</h2>
+            <h2
+              id="weather-box-3"
+              class="text-2xl lg:text-xl font-bold p-4 lg:p-2"
+            >
+              9 mph
+            </h2>
           </div>
           <div class="bg-[#25253f] w-40 lg:w-32 rounded-xl text-white">
             <h1 class="text-xl lg:text-lg font-light p-4 lg:p-2">
               Precipitation
             </h1>
-            <h2 class="text-2xl lg:text-xl font-bold p-4 lg:p-2">0 in</h2>
+            <h2
+              id="weather-box-4"
+              class="text-2xl lg:text-xl font-bold p-4 lg:p-2"
+            >
+              0 in
+            </h2>
           </div>
         </div>
         <!-- Daily forecast -->
@@ -161,6 +181,22 @@
               </div>
             </div>
 
+            <div class="bg-[#25253f] w-24 rounded-2xl text-white">
+              <h1 class="font-semibold p-2 text-center text-lg">Tue</h1>
+              <img src="./assets/images/icon-sunny.webp" alt="sunny icon" />
+              <div class="flex justify-between p-4">
+                <h1>68°</h1>
+                <h2>55°</h2>
+              </div>
+            </div>
+            <div class="bg-[#25253f] w-24 rounded-2xl text-white">
+              <h1 class="font-semibold p-2 text-center text-lg">Tue</h1>
+              <img src="./assets/images/icon-sunny.webp" alt="sunny icon" />
+              <div class="flex justify-between p-4">
+                <h1>68°</h1>
+                <h2>55°</h2>
+              </div>
+            </div>
             <div class="bg-[#25253f] w-24 rounded-2xl text-white">
               <h1 class="font-semibold p-2 text-center text-lg">Tue</h1>
               <img src="./assets/images/icon-sunny.webp" alt="sunny icon" />

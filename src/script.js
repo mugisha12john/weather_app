@@ -14,10 +14,21 @@ daysButton.addEventListener("click", () => {
 const searchButton = document.getElementById("search-btn");
 const searchInput = document.getElementById("search-input");
 const heroSection = document.querySelector(".hero-section");
-searchButton.addEventListener("click", () => {
-  searchButton.innerText = "Loading...";
-  const query = searchInput.value;
-  console.log("Searching for:", query);
+
+function loading() {
+  const weatherBoxes = [
+    document.getElementById("weather-box-1"),
+    document.getElementById("weather-box-2"),
+    document.getElementById("weather-box-3"),
+    document.getElementById("weather-box-4"),
+  ];
+  weatherBoxes.forEach((box) => {
+    box.innerHTML = `
+    <div class="flex justify-start items-center h-10">
+      <img src="./assets/images/icon-loading.svg" alt="Loading..." class="w-4 h-4 animate-spin" />
+    </div>
+  `;
+  });
   // Apply background color
   heroSection.style.backgroundImage = "none";
   heroSection.style.backgroundColor = "#25253f";
@@ -31,7 +42,13 @@ searchButton.addEventListener("click", () => {
 `;
 
   heroSection.classList.add("animate-pulse");
+}
 
+searchButton.addEventListener("click", () => {
+  searchButton.innerText = "Loading...";
+  const query = searchInput.value;
+  console.log("Searching for:", query);
+  loading();
   // Add your search functionality here
   const api = `https://geocoding-api.open-meteo.com/v1/search?name=${searchInput.value}&count=1&language=en&format=json`;
 
