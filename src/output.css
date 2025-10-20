@@ -347,6 +347,9 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
   .w-24 {
     width: calc(var(--spacing) * 24);
   }
@@ -553,6 +556,9 @@
   .bg-\[url\(\'\/assets\/images\/bg-today-small\.svg\'\)\] {
     background-image: url('/assets/images/bg-today-small.svg');
   }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
@@ -561,6 +567,12 @@
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .p-7 {
+    padding: calc(var(--spacing) * 7);
   }
   .text-center {
     text-align: center;

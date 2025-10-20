@@ -54,11 +54,34 @@ function loading() {
   dailyForecast.forEach((box) => {
     box.innerHTML = `
         <div class="flex justify-center  w-24 items-center h-32">
-          <img src="./assets/images/icon-loading.svg" alt="Loading..." class="w-4 h-4 animate-spin" />
+          
         </div>
       `;
     box.classList.add("animate-pulse");
   });
+
+  //   hourly forest loading
+  const days = document.getElementById("day");
+
+  const hourlyBoxes = [
+    document.getElementById("hourly-box-1"),
+    document.getElementById("hourly-box-2"),
+    document.getElementById("hourly-box-3"),
+    document.getElementById("hourly-box-4"),
+    document.getElementById("hourly-box-5"),
+    document.getElementById("hourly-box-6"),
+    document.getElementById("hourly-box-7"),
+    document.getElementById("hourly-box-8"),
+  ];
+  hourlyBoxes.forEach((box) => {
+    box.innerHTML = `
+      <div class="text-white  w-2xs p-6">
+        
+      </div>
+    `;
+    box.classList.add("animate-pulse");
+  });
+  days.innerHTML = "-";
 }
 searchButton.addEventListener("click", () => {
   searchButton.innerText = "Loading...";

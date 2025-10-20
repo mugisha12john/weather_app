@@ -100,7 +100,7 @@
       <!-- main two cards -->
       <section class="flex flex-col">
         <div
-          class="hero-section rounded-xl flex-1 mx-auto bg-[url('/assets/images/bg-today-small.svg')] lg:bg-[url('/assets/images/bg-today-large.svg')] lg:w-[800px] mt-10"
+          class="hero-section rounded-xl bg-no-repeat flex-1 mx-auto bg-[url('/assets/images/bg-today-small.svg')] lg:bg-[url('/assets/images/bg-today-large.svg')] lg:w-[800px] mt-10"
         >
           <div class="lg:flex lg:justify-around lg:items-center lg:mb-20">
             <div class="p-2 lg:mt-14">
@@ -261,7 +261,7 @@
             id="days-btn"
             class="bg-[#36365f] flex gap-2 w-24 font-semibold hover:cursor-pointer rounded-[8px] p-2 text-white"
           >
-            <p>Tuesdays</p>
+            <p id="day">Tuesdays</p>
             <img src="/assets/images/icon-dropdown.svg" alt="" srcset="" />
           </button>
         </div>
@@ -285,8 +285,9 @@
           </ul>
         </div>
         <!-- hourly forecast details card -->
-        <main class="p-4 grid grid-cols-1 gap-2">
+        <main class="hourly-box p-4 grid grid-cols-1 gap-2">
           <div
+            id="hourly-box-1"
             class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
           >
             <div class="flex justify-center items-center">
@@ -297,6 +298,7 @@
           </div>
           <!-- 2 -->
           <div
+            id="hourly-box-2"
             class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
           >
             <div class="flex justify-center items-center">
@@ -307,10 +309,66 @@
           </div>
           <!-- 3 -->
           <div
+            id="hourly-box-3"
             class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
           >
             <div class="flex justify-center items-center">
               <img src="/assets/images/icon-sunny.webp" class="w-12" />
+              <h3 class="text-white text-xl">3 PM</h3>
+            </div>
+            <h1 class="text-white text-lg">20</h1>
+          </div>
+          <!-- 4 -->
+          <div
+            id="hourly-box-4"
+            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+          >
+            <div class="flex justify-center items-center">
+              <img src="/assets/images/icon-fog.webp" class="w-12" />
+              <h3 class="text-white text-xl">3 PM</h3>
+            </div>
+            <h1 class="text-white text-lg">20</h1>
+          </div>
+          <!-- 5 -->
+          <div
+            id="hourly-box-5"
+            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+          >
+            <div class="flex justify-center items-center">
+              <img src="/assets/images/icon-fog.webp" class="w-12" />
+              <h3 class="text-white text-xl">3 PM</h3>
+            </div>
+            <h1 class="text-white text-lg">20</h1>
+          </div>
+          <!-- 6 -->
+          <div
+            id="hourly-box-6"
+            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+          >
+            <div class="flex justify-center items-center">
+              <img src="/assets/images/icon-fog.webp" class="w-12" />
+              <h3 class="text-white text-xl">3 PM</h3>
+            </div>
+            <h1 class="text-white text-lg">20</h1>
+          </div>
+          <!-- 7 -->
+          <div
+            id="hourly-box-7"
+            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+          >
+            <div class="flex justify-center items-center">
+              <img src="/assets/images/icon-fog.webp" class="w-12" />
+              <h3 class="text-white text-xl">3 PM</h3>
+            </div>
+            <h1 class="text-white text-lg">20</h1>
+          </div>
+          <!-- 8 -->
+          <div
+            id="hourly-box-8"
+            class="bg-[#36365f] w-2xs rounded-lg flex justify-between items-center p-2"
+          >
+            <div class="flex justify-center items-center">
+              <img src="/assets/images/icon-fog.webp" class="w-12" />
               <h3 class="text-white text-xl">3 PM</h3>
             </div>
             <h1 class="text-white text-lg">20</h1>
