@@ -40,10 +40,26 @@ function loading() {
      <p class="text-white font-bold text-2xl">please wait</p>
   </div>
 `;
-
   heroSection.classList.add("animate-pulse");
-}
 
+  const dailyForecast = [
+    document.getElementById("daily-box-1"),
+    document.getElementById("daily-box-2"),
+    document.getElementById("daily-box-3"),
+    document.getElementById("daily-box-4"),
+    document.getElementById("daily-box-5"),
+    document.getElementById("daily-box-6"),
+    document.getElementById("daily-box-7"),
+  ];
+  dailyForecast.forEach((box) => {
+    box.innerHTML = `
+        <div class="flex justify-center  w-24 items-center h-32">
+          <img src="./assets/images/icon-loading.svg" alt="Loading..." class="w-4 h-4 animate-spin" />
+        </div>
+      `;
+    box.classList.add("animate-pulse");
+  });
+}
 searchButton.addEventListener("click", () => {
   searchButton.innerText = "Loading...";
   const query = searchInput.value;
