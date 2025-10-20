@@ -29,11 +29,11 @@
     <main class="m-8">
       <div class="flex justify-between">
         <img src="./assets/images/logo.svg" class="w-24" alt="" />
-        <div
-          class="flex justify-center bg-[#25253F] hover:cursor-pointer p-2 gap-2 rounded-xl"
-        >
+        <div class="flex justify-center bg-[#25253F] p-2 gap-2 rounded-xl">
           <img src="./assets/images/icon-units.svg" class="w-5" alt="" />
-          <span class="text-white font-medium">Units v</span>
+          <button id="units" class="text-white font-medium hover:cursor-pointer">
+            Units v
+          </button>
         </div>
       </div>
       <!-- Unit dropdown boxes -->
@@ -41,7 +41,8 @@
         class="bg-[#26264a] rounded-xl w-52 mt-4 lg:mr-8 absolute left-40 lg:left-[83%]"
       >
         <div
-          class="flex flex-col justify-center p-4 gap-4 text-white font-medium text-sm"
+          id="dropdown-unit"
+          class="flex flex-col justify-center p-4 gap-4 text-white font-medium text-sm cursor-pointer"
         >
           <span class="bg-[#3c3c57] p-1 rounded-[8px]">Switch to imperial</span>
           <span class="text-[#6f6f9a]">Temperature</span>
@@ -235,5 +236,7 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <script src="/src/script.js"></script>
   </body>
 </html>
