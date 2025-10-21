@@ -302,6 +302,9 @@
   .h-32 {
     height: calc(var(--spacing) * 32);
   }
+  .h-\[200px\] {
+    height: 200px;
+  }
   .h-\[300px\] {
     height: 300px;
   }

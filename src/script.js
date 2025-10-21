@@ -83,6 +83,30 @@ function loading() {
   });
   days.innerHTML = "-";
 }
+function weatherCodeIcon(code) {
+  const icons = {
+    0: { icon: "./assets/images/icon-sunny.webp" },
+    1: { icon: "./assets/images/icon-sunny.webp" },
+    2: { icon: "./assets/images/icon-partly-cloudy.webp" },
+    3: { icon: "./assets/images/icon-overcast.webp" },
+    45: { icon: "./assets/images/icon-fog.webp" },
+    48: { icon: "./assets/images/icon-fog.webp" },
+    51: { icon: "./assets/images/icon-drizzle.webp" },
+    53: { icon: "./assets/images/icon-drizzle.webp" },
+    55: { icon: "./assets/images/icon-drizzle.webp" },
+    61: { icon: "./assets/images/icon-rain.webp" },
+    63: { icon: "./assets/images/icon-rain.webp" },
+    65: { icon: "./assets/images/icon-rain.webp" },
+    80: { icon: "./assets/images/icon-snow.webp" },
+    81: { icon: "./assets/images/icon-snow.webp" },
+    82: { icon: "./assets/images/icon-snow.webp" },
+    95: { icon: "./assets/images/icon-storm.webp" },
+    96: { icon: "./assets/images/icon-storm.webp" },
+    99: { icon: "./assets/images/icon-storm.webp" },
+  };
+  return icons[code] || { icon: "/assets/images/icon-default.webp" };
+}
+
 searchButton.addEventListener("click", () => {
   if (searchInput.value.trim() === "") {
     alert("Please enter a location to search.");
@@ -108,13 +132,44 @@ searchButton.addEventListener("click", () => {
       searchButton.innerText = "Search";
       heroSection.classList.remove("animate-pulse");
       // Now you can use wetherJson to update your UI with the fetched weather data
+      //   heroSection.innerHTML = `
+      //     <div class="p-2 lg:mt-14">
+      //       <h2 class="text-white font-medium">Location: ${json.results[0].name}, ${json.results[0].country}</h2>
+      //       <p class="text-white text-5xl font-bold">${wetherJson.current.temperature_2m}°C</p>
+      //       <p class="text-white font-medium">Weather Code: ${wetherJson.current.weather_code}</p>
+      //     </div>
+      //     `;
+
+      heroSection.innerText = "";
+      heroSection.style.backgroundImage =
+        "url('/assets/images/bg-today-large.svg')";
+      heroSection.style.backgroundRepeat = "no-repeat";
+      heroSection.style.backgroundSize = "cover";
+      heroSection.style.backgroundColor = "transparent";
       heroSection.innerHTML = `
-        <div class="p-2 lg:mt-14">
-          <h2 class="text-white font-medium">Location: ${json.results[0].name}, ${json.results[0].country}</h2>
-          <p class="text-white text-5xl font-bold">${wetherJson.current.temperature_2m}°C</p>
-          <p class="text-white font-medium">Weather Code: ${wetherJson.current.weather_code}</p>
-        </div>
-        `;
+            <div class="lg:flex lg:justify-around lg:items-center lg:mb-20">
+            <div class="p-2 lg:mt-14">
+              <h2 class="mt-4 text-white text-3xl font-bold text-center">
+                ${json.results[0].name}, ${json.results[0].country}
+              </h2>
+              <h5 class="text-white text-lg font-light text-center">
+                Tuesday, Aug 5, 2025
+              </h5>
+            </div>
+            <div
+              class="flex gap-2 mt-14 mb-0 lg:mb-0 justify-center items-center"
+            >
+              <img
+                src="${weatherCodeIcon(wetherJson.current.weather_code).icon}"
+                class="w-32"
+                alt="cloud image"
+              />
+              <h1 class="text-8xl mr-10 mb-2 lg:mb-0 text-white font-bold">
+                <i>${wetherJson.current.temperature_2m}°C</i>
+              </h1>
+            </div>
+          </div>`;
+
       console.log(wetherJson);
       console.log(json);
     } catch (err) {
