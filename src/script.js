@@ -87,8 +87,8 @@ function weatherCodeIcon(code) {
   const icons = {
     0: { icon: "./assets/images/icon-sunny.webp" },
     1: { icon: "./assets/images/icon-sunny.webp" },
-    2: { icon: "./assets/images/icon-partly-cloudy.webp" },
-    3: { icon: "./assets/images/icon-overcast.webp" },
+    2: { icon: "./assets/images/icon-overcast.webp" },
+    3: { icon: "./assets/images/icon-partly-cloudy.webp" },
     45: { icon: "./assets/images/icon-fog.webp" },
     48: { icon: "./assets/images/icon-fog.webp" },
     51: { icon: "./assets/images/icon-drizzle.webp" },
@@ -146,6 +146,15 @@ searchButton.addEventListener("click", () => {
       heroSection.style.backgroundRepeat = "no-repeat";
       heroSection.style.backgroundSize = "cover";
       heroSection.style.backgroundColor = "transparent";
+      const currentDateWeather = new Date(wetherJson.current.time);
+      const month = currentDateWeather.toLocaleString("en-US", {
+        month: "short",
+      });
+      const dayLong = currentDateWeather.toLocaleString("en-US", {
+        weekday: "long",
+      });
+      const dayDate = currentDateWeather.getDate();
+      const year = currentDateWeather.getFullYear();
       heroSection.innerHTML = `
             <div class="lg:flex lg:justify-around lg:items-center lg:mb-20">
             <div class="p-2 lg:mt-14">
@@ -153,7 +162,7 @@ searchButton.addEventListener("click", () => {
                 ${json.results[0].name}, ${json.results[0].country}
               </h2>
               <h5 class="text-white text-lg font-light text-center">
-                Tuesday, Aug 5, 2025
+                ${dayLong}, ${month} ${dayDate}, ${year}
               </h5>
             </div>
             <div
@@ -164,7 +173,7 @@ searchButton.addEventListener("click", () => {
                 class="w-32"
                 alt="cloud image"
               />
-              <h1 class="text-8xl mr-10 mb-2 lg:mb-0 text-white font-bold">
+              <h1 class="text-6xl mr-10 mb-2 lg:mb-0 lg:text-7xl text-white font-bold">
                 <i>${wetherJson.current.temperature_2m}°C</i>
               </h1>
             </div>
