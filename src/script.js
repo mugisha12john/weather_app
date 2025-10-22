@@ -200,6 +200,40 @@ searchButton.addEventListener("click", () => {
       box4.innerHTML = `
       <h3 class="text-2xl lg:text-xl font-bold p-4 lg:p-2 text-white">${precipitation} ${precipitationUnit}</h3>
     `;
+
+      //dail forecast log
+      const max = wetherJson.daily.temperature_2m_max;
+      const min = wetherJson.daily.temperature_2m_min;
+      const weatherCodes = wetherJson.daily.weather_code;
+
+      const dailyBoxes = [
+        document.getElementById("daily-box-1"),
+        document.getElementById("daily-box-2"),
+        document.getElementById("daily-box-3"),
+        document.getElementById("daily-box-4"),
+        document.getElementById("daily-box-5"),
+        document.getElementById("daily-box-6"),
+        document.getElementById("daily-box-7"),
+      ];
+      dailyBoxes.forEach((box, index) => {
+        box.classList.remove("animate-pulse");
+        box.innerHTML = `
+            <div
+              class="bg-[#25253f] w-28 rounded-2xl text-white"
+            >
+              <h1 class="font-semibold p-2 text-center text-lg">Tue</h1>
+              <img src="${
+                weatherCodeIcon(weatherCodes[index]).icon
+              }" alt="weather icon" />
+              <div class="flex justify-between text-[15px] p-4">
+                <h1 >${max[index]}°</h1>
+                <h2>${min[index]}°</h2>
+              </div>
+            </div>
+      `;
+      });
+      console.log(wetherJson.daily.temperature_2m_max);
+      console.log(wetherJson.daily.temperature_2m_min);
     } catch (err) {
       console.error("Error fetching data:", err);
       searchButton.innerText = "Search";
