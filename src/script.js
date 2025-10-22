@@ -189,16 +189,16 @@ searchButton.addEventListener("click", () => {
       const box4 = document.getElementById("weather-box-4");
 
       box1.innerHTML = `
-      <h3 class="text-2xl lg:text-xl font-bold p-4 lg:p-2 text-white">${temperature} ${temperatureUnit}</h3>
+      <h3 class="text-2xl lg:text-xl font-bold lg:p-2 p-2">${temperature} ${temperatureUnit}</h3>
     `;
       box2.innerHTML = `
-      <h3 class="text-2xl lg:text-xl font-bold p-4 lg:p-2 text-white">${humidity} ${humidityUnit}</h3>
+      <h3 class="text-2xl lg:text-xl font-bold lg:p-2 p-2">${humidity} ${humidityUnit}</h3>
     `;
       box3.innerHTML = `
-      <h3 class="text-2xl lg:text-xl font-bold p-4 lg:p-2 text-white">${windSpeed} ${windSpeedUnit}</h3>
+      <h3 class="text-2xl lg:text-xl font-bold lg:p-2 p-2">${windSpeed} ${windSpeedUnit}</h3>
     `;
       box4.innerHTML = `
-      <h3 class="text-2xl lg:text-xl font-bold p-4 lg:p-2 text-white">${precipitation} ${precipitationUnit}</h3>
+      <h3 class="text-2xl lg:text-xl font-bold lg:p-2 p-2">${precipitation} ${precipitationUnit}</h3>
     `;
 
       //dail forecast log
