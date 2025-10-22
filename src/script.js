@@ -131,15 +131,6 @@ searchButton.addEventListener("click", () => {
       const wetherJson = await wether.json();
       searchButton.innerText = "Search";
       heroSection.classList.remove("animate-pulse");
-      // Now you can use wetherJson to update your UI with the fetched weather data
-      //   heroSection.innerHTML = `
-      //     <div class="p-2 lg:mt-14">
-      //       <h2 class="text-white font-medium">Location: ${json.results[0].name}, ${json.results[0].country}</h2>
-      //       <p class="text-white text-5xl font-bold">${wetherJson.current.temperature_2m}°C</p>
-      //       <p class="text-white font-medium">Weather Code: ${wetherJson.current.weather_code}</p>
-      //     </div>
-      //     `;
-
       heroSection.innerText = "";
       heroSection.style.backgroundImage =
         "url('/assets/images/bg-today-large.svg')";
@@ -181,6 +172,34 @@ searchButton.addEventListener("click", () => {
 
       console.log(wetherJson);
       console.log(json);
+
+      // Further processing of wetherJson to update the UI can be done here
+      const temperature = wetherJson.current.temperature_2m;
+      const temperatureUnit = wetherJson.current_units.temperature_2m;
+      const humidity = wetherJson.current.relative_humidity_2m;
+      const windSpeed = wetherJson.current.wind_speed_10m;
+      const precipitation = wetherJson.current.precipitation;
+      const humidityUnit = wetherJson.current_units.relative_humidity_2m;
+      const windSpeedUnit = wetherJson.current_units.wind_speed_10m;
+      const precipitationUnit = wetherJson.current_units.precipitation;
+
+      const box1 = document.getElementById("weather-box-1");
+      const box2 = document.getElementById("weather-box-2");
+      const box3 = document.getElementById("weather-box-3");
+      const box4 = document.getElementById("weather-box-4");
+
+      box1.innerHTML = `
+      <h3 class="text-2xl lg:text-xl font-bold p-4 lg:p-2 text-white">${temperature} ${temperatureUnit}</h3>
+    `;
+      box2.innerHTML = `
+      <h3 class="text-2xl lg:text-xl font-bold p-4 lg:p-2 text-white">${humidity} ${humidityUnit}</h3>
+    `;
+      box3.innerHTML = `
+      <h3 class="text-2xl lg:text-xl font-bold p-4 lg:p-2 text-white">${windSpeed} ${windSpeedUnit}</h3>
+    `;
+      box4.innerHTML = `
+      <h3 class="text-2xl lg:text-xl font-bold p-4 lg:p-2 text-white">${precipitation} ${precipitationUnit}</h3>
+    `;
     } catch (err) {
       console.error("Error fetching data:", err);
       searchButton.innerText = "Search";
