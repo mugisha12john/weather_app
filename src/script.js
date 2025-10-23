@@ -217,11 +217,15 @@ searchButton.addEventListener("click", () => {
       ];
       dailyBoxes.forEach((box, index) => {
         box.classList.remove("animate-pulse");
+        let dayName = new Date(wetherJson.daily.time[index]).toLocaleDateString(
+          "en-US",
+          { weekday: "short" }
+        );
         box.innerHTML = `
             <div
               class="bg-[#25253f] w-28 rounded-2xl text-white"
             >
-              <h1 class="font-semibold p-2 text-center text-lg">Tue</h1>
+              <h1 class="font-semibold p-2 text-center text-lg">${dayName}</h1>
               <img src="${
                 weatherCodeIcon(weatherCodes[index]).icon
               }" alt="weather icon" />
@@ -232,8 +236,28 @@ searchButton.addEventListener("click", () => {
             </div>
       `;
       });
-      console.log(wetherJson.daily.temperature_2m_max);
-      console.log(wetherJson.daily.temperature_2m_min);
+      const days = document.getElementById("day");
+
+      const hourlyBoxes = [
+        document.getElementById("hourly-box-1"),
+        document.getElementById("hourly-box-2"),
+        document.getElementById("hourly-box-3"),
+        document.getElementById("hourly-box-4"),
+        document.getElementById("hourly-box-5"),
+        document.getElementById("hourly-box-6"),
+        document.getElementById("hourly-box-7"),
+        document.getElementById("hourly-box-8"),
+      ];
+      days.innerText = dayLong;
+      hourlyBoxes.forEach((box) => {
+        box.innerHTML = `
+        <div class="flex justify-center items-center">
+              <img src="/assets/images/icon-fog.webp" class="w-12" />
+              <h3 class="text-white text-xl">3 PM</h3>
+            </div>
+            <h1 class="text-white text-lg">20</h1>`;
+        box.classList.remove("animate-pulse");
+      });
     } catch (err) {
       console.error("Error fetching data:", err);
       searchButton.innerText = "Search";
