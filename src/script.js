@@ -170,8 +170,6 @@ searchButton.addEventListener("click", () => {
             </div>
           </div>`;
 
-  
-
       // Further processing of wetherJson to update the UI can be done here
       const temperature = wetherJson.current.temperature_2m;
       const temperatureUnit = wetherJson.current_units.temperature_2m;
