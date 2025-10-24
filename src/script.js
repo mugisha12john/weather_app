@@ -170,8 +170,7 @@ searchButton.addEventListener("click", () => {
             </div>
           </div>`;
 
-      console.log(wetherJson);
-      console.log(json);
+  
 
       // Further processing of wetherJson to update the UI can be done here
       const temperature = wetherJson.current.temperature_2m;
@@ -258,7 +257,6 @@ searchButton.addEventListener("click", () => {
         temperature: temperaturesHourly,
         weatherCode: weatherCodesHourly,
       };
-
       // Get current time and find index
       const now = new Date();
       const currentIndex = data.time.findIndex((t) => new Date(t) >= now);
@@ -271,15 +269,19 @@ searchButton.addEventListener("click", () => {
           temp: data.temperature[currentIndex + i],
           code: weatherCodeIcon(data.weatherCode[currentIndex + i]),
         }));
-      console.log(next8[0].time.getHours());
-      hourlyBoxes.forEach((box) => {
-        box.innerHTML = `
-        <div class="flex justify-center items-center">
-              <img src="/assets/images/icon-fog.webp" class="w-12" />
-              <h3 class="text-white text-xl">3 PM</h3>
-            </div>
-            <h1 class="text-white text-lg">20</h1>`;
-        box.classList.remove("animate-pulse");
+      next8.forEach((hourData, index) => {
+        const hours = hourData.time.getHours();
+        const ampm = hours >= 12 ? "PM" : "AM";
+        const displayHour = hours % 12 === 0 ? 12 : hours % 12;
+        hourlyBoxes[index].classList.remove("animate-pulse");
+        hourlyBoxes[index].innerHTML = `
+        <div class="flex items-center gap-2">
+              <img src="${hourData.code.icon}" class="w-12" />
+              <h3 class="text-white text-lg">${displayHour} ${ampm}</h3>
+        </div>
+            <h1 class="text-white text-sm font-semibold">${hourData.temp}°C</h1>
+            
+      `;
       });
     } catch (err) {
       console.error("Error fetching data:", err);
