@@ -249,6 +249,29 @@ searchButton.addEventListener("click", () => {
         document.getElementById("hourly-box-8"),
       ];
       days.innerText = dayLong;
+      const temperaturesHourly = wetherJson.hourly.temperature_2m;
+      const weatherCodesHourly = wetherJson.hourly.weather_code;
+      const timesHourly = wetherJson.hourly.time;
+      // Prepare data object
+      const data = {
+        time: timesHourly,
+        temperature: temperaturesHourly,
+        weatherCode: weatherCodesHourly,
+      };
+
+      // Get current time and find index
+      const now = new Date();
+      const currentIndex = data.time.findIndex((t) => new Date(t) >= now);
+
+      // Get next 8 hours
+      const next8 = data.time
+        .slice(currentIndex, currentIndex + 8)
+        .map((t, i) => ({
+          time: new Date(t),
+          temp: data.temperature[currentIndex + i],
+          code: weatherCodeIcon(data.weatherCode[currentIndex + i]),
+        }));
+      console.log(next8[0].time.getHours());
       hourlyBoxes.forEach((box) => {
         box.innerHTML = `
         <div class="flex justify-center items-center">
