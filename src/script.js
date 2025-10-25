@@ -116,19 +116,32 @@ searchButton.addEventListener("click", () => {
   searchButton.innerText = "Loading...";
 
   loading();
+
+  const errorMessage = document.getElementById("error-message-1");
+  const errorMessage2 = document.getElementById("error-message-2");
   // Add your search functionality here
   const api = `https://geocoding-api.open-meteo.com/v1/search?name=${searchInput.value}&count=1&language=en&format=json`;
 
   async function fetchData() {
     try {
-      const res = await fetch(api);
-      const json = await res.json();
+      let res = await fetch(api);
+      let json = await res.json();
+      if (!json.results || json.results.length === 0) {
+        errorMessage.classList.remove("hidden");
+        heroSection.classList.remove("animate-pulse");
+        heroSection.innerHTML = "";
+        searchButton.innerText = "Search";
+        errorMessage.innerHTML = `<p class="text-white font-medium text-2xl text-center">Location not found. Please try again.</p>`;
+
+        return;
+      }
       let lat = json.results[0].latitude;
       let lon = json.results[0].longitude;
       const wether = await fetch(
         `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,is_day,weather_code,wind_speed_10m,precipitation&daily=weather_code,temperature_2m_max,temperature_2m_min&hourly=temperature_2m,weather_code`
       );
       const wetherJson = await wether.json();
+
       searchButton.innerText = "Search";
       heroSection.classList.remove("animate-pulse");
       heroSection.innerText = "";
@@ -278,11 +291,11 @@ searchButton.addEventListener("click", () => {
               <h3 class="text-white text-lg">${displayHour} ${ampm}</h3>
         </div>
             <h1 class="text-white text-sm font-semibold">${hourData.temp}°C</h1>
-            
       `;
       });
     } catch (err) {
-      console.error("Error fetching data:", err);
+      console.log("Error fetching data:", err);
+
       searchButton.innerText = "Search";
     }
   }
